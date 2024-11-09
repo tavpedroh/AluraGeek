@@ -17,28 +17,30 @@
     <main class="main">
         <section class="esquerda">
             <h2 class="esquerda_titulo">MEUS PRODUTOS:</h2>
-            <ul class="produtos_container"></ul>
+
+            <ul class="produtos_container" data-lista>
+
+            </ul>
         </section>
         <section class="direita">
             <h2 class="direita_titulo">Adicionar Produto:</h2>
-            <form class="input">
+            <form class="input" data-formulario>
                 <div>
-                    
-                    <input name="Nome" class="input_texto" required placeholder="nome . . ." ></input>
+                    <input name="Nome" id="nome" class="input_texto" required placeholder="nome . . ." data-nome></input>
                 </div>
                 <div>
-                    
-                    <input name="Valor" class="input_texto" required placeholder="valor . . ."></input>
+                    <input name="Valor" id="valor" class="input_texto" required placeholder="valor . . ." data-valor></input>
                 </div>
                 <div>
-                    
-                    <input name="Imagem" class="input_texto" required placeholder="imagem . . ."></input>
+                    <input name="Imagem" id="imagem" class="input_texto" required placeholder="imagem . . ." data-imagem></input>
                 </div>
             </form>
-            <div class="button">
-                <button class="button_guardar">Guardar</button>
-                <button class="button_limpar">Limpar</button>
-            </div>
+            <nav>
+                <div class="button">
+                    <button class="button_guardar" type="submit">Guardar</button>
+                    <button class="button_limpar" type="reset">Limpar</button>
+                </div>
+            </nav>
         </section>
     </main>
     <footer class="footer">
@@ -49,6 +51,7 @@
         <p class="footer_t">DESENVOLVIDO POR PEDRO HENRIQUE TAVARES PINTO</p>
         <p class="footer_t">ALURA LATAM - 202X</p>
     </footer>
-    <script src="./js/conectaApi.js"></script>
+    <script src="./js/criarProduto.js" type="module"></script>
+    <script src="./js/mostrarProduto.js" type="module"></script>
 </body>
 </html>
