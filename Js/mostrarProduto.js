@@ -1,4 +1,4 @@
-import { conectaApi } from "./conectaApi.json";
+import { conectaApi } from "./conectaApi.js";
 
 const lista = document.querySelector("[data-lista]");
 
@@ -7,10 +7,10 @@ export default function constroiCard(nome, valor, imagem){
 
     produto.className = "produtos__item";
     produto.innerHTML = `
-        <div>
+        <div class="produtos_card">
             <img src="${imagem}" alt="imagem produto">
-            <h3>${nome}</h3>
-            <p>${valor}</p>
+            <h3 class="produto_nome">${nome}</h3>
+            <p class="produto_valor">${valor}</p>
         </div>`
 
     return produto;

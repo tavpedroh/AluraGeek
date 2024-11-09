@@ -1,6 +1,6 @@
-import { conectaApi } from "./conectaApi.json";
+import { conectaApi } from "./conectaApi.js";
 
-const formulario = document.querySelector("[data-fornmulario]");
+const formulario = document.querySelector("[data-formulario]");
 
 async function criarProduto(evento) {
     evento.preventDefault();
@@ -11,7 +11,7 @@ async function criarProduto(evento) {
 
     try{
         await conectaApi.criarProduto(nome,valor,imagem);
-        
+        formulario.reset();
     } catch(e){
         alert(e);
     }

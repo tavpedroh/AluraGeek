@@ -10,7 +10,7 @@ async function criaProduto(nome,valor,imagem) {
         headers: {"content-type": "application.json"},
         body: JSON.stringify({
             nome: nome,
-            valor: valor,
+            valor: `${valor}`,
             imagem: imagem
         })
     });

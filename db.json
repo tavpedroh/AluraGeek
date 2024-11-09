@@ -4,25 +4,25 @@
         "id": 1,
         "nome": "Stormtrooper",
         "valor": "R$ 60,00",
-        "imagem": "a"
+        "imagem": "./images/StormTrooper.png"
         },
         {
             "id": 2,
             "nome": "Game Boy Classic",
-            "valor": "R$ 60,00",
-            "imagem": "a"
+            "valor": "60,00",
+            "imagem": "./images/GameBoy.png"
         },
         {
             "id": 3,
             "nome": "Stormtrooper",
             "valor": "R$ 60,00",
-            "imagem": "a"
+            "imagem": "./images/StormTrooper.png"
         },
         {
             "id": 4,
             "nome": "Game Boy Classic",
             "valor": "R$ 60,00",
-            "imagem": "a"
+            "imagem": "./images/GameBoy.png"
         }
     ]
 }

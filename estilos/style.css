@@ -5,6 +5,7 @@
     --fonte: "Press Start 2P", system-ui;
     --fonte-secundaria: "IBM Plex Mono", monospace;
 
+    --roxo2: #5D04D9;
     --roxo: #5300C8;
     --branco: #E5E5E5;
     --azul: #03318C;
@@ -17,6 +18,8 @@
 }
 
 
+
+/* Header */
 .header{
     
     display: flex;
@@ -35,8 +38,7 @@
 
 
 
-
-
+/* Main */
 .main{
     display: flex;
     justify-content: space-around;
@@ -44,23 +46,79 @@
 }
 
 
-
+/* Esquerda */
 .esquerda{
-    display: flex;
+    font-family: var(--fonte);
+    /* display: flex;
     position: relative;
     left: 90px;
     margin: auto;
-    max-width: 250px;
+    max-width: 250px; */
+    padding: 20px;
 }
 
 .esquerda_titulo{
+    text-align: center;
     font-family: var(--fonte);
     font-size: 24px;
     font-weight: 400;
+    margin-bottom: 20px;
 }
 
 
+/* Produtos */
+.produtos_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+}
 
+.produtos_card{
+    background-color: var(--roxo2);
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    color: var(--branco);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+}
+
+.produto_card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.produto_nome {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.produto_valor {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.produto_card button {
+    background-color: #ff0000;
+    border: none;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.produto_card button:hover {
+    background-color: #cc0000;
+}
+
+/* direita */
 
 .direita{
     display: flex;
@@ -78,8 +136,8 @@
     flex-flow: column wrap;
 }
 
-
-.input{
+/* Formulario */
+.form_input{
     display: flex;
     flex-direction: column;
     
@@ -96,7 +154,7 @@
     padding: 10px 250px 10px 15px;
 }
 
-
+/* botoes */
 .button{
     gap: px;
     margin-top: 20px;
@@ -113,7 +171,6 @@
     background-color: var(--azul);
     color: var(--branco);
 }
-
 .button_limpar{
     font-family: var(--fonte-secundaria);
     padding: 15px 50px 15px 50px;
@@ -127,7 +184,7 @@
 
 
 
-
+/* Footer */
 .footer{
     display: flex;
     flex-direction: column; 
