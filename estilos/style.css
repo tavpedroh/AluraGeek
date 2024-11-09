@@ -98,7 +98,7 @@
 
 
 .button{
-    gap: 150px;
+    gap: px;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -135,10 +135,11 @@
     background-color: var(--roxo);
     color: var(--branco);
     padding: 64px 0px 64px 0px;
-    margin: auto;
+    /* margin: auto; */
     /* width: 100%; */
     position:relative ;
     /* left: 50%; */
+    text-align: center;
 }
 
 .footer_texto{
