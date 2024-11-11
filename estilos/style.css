@@ -48,13 +48,14 @@
 
 /* Esquerda */
 .esquerda{
-    font-family: var(--fonte);
-    /* display: flex;
+    /* font-family: var(--fonte); */
+    /* display: flex; */
     position: relative;
-    left: 90px;
+    left: 70px;
     margin: auto;
-    max-width: 250px; */
-    padding: 20px;
+    
+    /* padding: 20px; */
+    
 }
 
 .esquerda_titulo{
@@ -67,47 +68,60 @@
 
 
 /* Produtos */
-.produtos_container{
+ .produtos_container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     padding: 0px 0px 0px 0px;
     list-style: none;
+    right: 150px;
+    overflow-y: auto;
+    height: 600px;
+    max-width: 630px;
 }
 
-.produtos_card{
-    background-color: var(--roxo2);
-    border: 2px solid #000000;
+.produto_card {
+    background-color: var(--roxo);
+    border: 2px solid var(--roxo2);
     border-radius: 8px;
     padding: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     color: var(--branco);
     text-align: center;
     font-family: var(--fonte-secundaria);
+    width: 150px; 
+    
 }
 
-.produto_card img {
+/* Imagem do produto */
+.produto_card_img {
     width: 100%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
+    object-fit: cover; 
 }
 
+/* Nome do produto */
 .produto_nome {
     font-weight: bold;
     font-size: 14px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
+/* Valor do produto */
 .produto_valor {
     font-size: 16px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
-.produto_card button {
-    background-color: #ff0000;
+/* Botão de exclusão (lixeira) */
+.produto_card_button {
+    background-color: var(--roxo);
     border: none;
-    color: #ffffff;
+    color: var(--branco);
     padding: 5px;
     border-radius: 4px;
     cursor: pointer;
@@ -115,8 +129,17 @@
 }
 
 .produto_card button:hover {
-    background-color: #cc0000;
+    background-color: var(--roxo2);
 }
+
+.icone_lixeira{
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+    background-image: none;
+}
+
+
 
 /* direita */
 
