@@ -1,7 +1,15 @@
 async function listaProdutos() {
-    const conexao = await fetch('http://localhost:3000/produtos');
-    const conexaoConvertida = await conexao.json();
-    return conexaoConvertida;
+    try{
+        const conexao = await fetch('http://localhost:3000/produtos');
+        if (!conexao.ok) {
+            throw new Error(`Erro na API: ${conexao.statusText}`);
+        }
+        const conexaoConvertida = await conexao.json();
+        return conexaoConvertida;
+    } catch (erro) {
+        console.error("Erro ao buscar produtos:", erro);
+        throw erro;
+    }
 }
 
 async function criaProduto(nome,valor,imagem) {
@@ -22,7 +30,19 @@ async function criaProduto(nome,valor,imagem) {
     return conexaoConvertida;
 }
 
+
+async function deletaProduto(id) {
+    const conexao = await fetch(`http://localhost:3000/produtos/${id}`, {
+        method: "DELETE",
+    });
+
+    if (!conexao.ok) {
+        throw new Error("Não foi possível deletar o produto.");
+    }
+}
+
 export const conectaApi = {
     listaProdutos,
-    criaProduto
+    criaProduto,
+    deletaProduto
 }
