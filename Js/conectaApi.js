@@ -7,10 +7,10 @@ async function listaProdutos() {
 async function criaProduto(nome,valor,imagem) {
     const conexao = await fetch('http://localhost:3000/produtos',{
         method: "POST",
-        headers: {"content-type": "application.json"},
+        headers: {"content-type": "application/json"},
         body: JSON.stringify({
             nome: nome,
-            valor: `${valor}`,
+            valor: `R$ ${valor}`,
             imagem: imagem
         })
     });

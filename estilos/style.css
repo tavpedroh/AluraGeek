@@ -179,7 +179,7 @@
 
 /* botoes */
 .button{
-    gap: px;
+    gap: 150px;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;

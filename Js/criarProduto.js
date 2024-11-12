@@ -1,6 +1,5 @@
 import { conectaApi } from "./conectaApi.js";
 
-const formulario = document.querySelector("[data-formulario]");
 
 async function criarProduto(evento) {
     evento.preventDefault();
@@ -10,11 +9,22 @@ async function criarProduto(evento) {
     const imagem = document.querySelector("[data-imagem]").value;
 
     try{
-        await conectaApi.criarProduto(nome,valor,imagem);
-        formulario.reset();
+        await conectaApi.criaProduto(nome,valor,imagem);
     } catch(e){
         alert(e);
     }
 }
 
-formulario.addEventListener("submit", evento => criarProduto(evento));
+function limparForm(evento) {
+    evento.preventDefault();
+
+    document.querySelector("[data-nome]").value = '';
+    document.querySelector("[data-valor]").value = '';
+    document.querySelector("[data-imagem]").value = '';
+}
+
+const botaoDeGuardar = document.querySelector("[data-botao-guardar]");
+botaoDeGuardar.addEventListener("click", evento => criarProduto(evento));
+
+const botaoDeLimpar = document.querySelector("[data-botao-limpar]");
+botaoDeLimpar.addEventListener("click", evento => limparForm(evento));
