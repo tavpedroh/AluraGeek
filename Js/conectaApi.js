@@ -1,15 +1,9 @@
 async function listaProdutos() {
-    try{
         const conexao = await fetch('http://localhost:3000/produtos');
-        if (!conexao.ok) {
-            throw new Error(`Erro na API: ${conexao.statusText}`);
-        }
+        
         const conexaoConvertida = await conexao.json();
         return conexaoConvertida;
-    } catch (erro) {
-        console.error("Erro ao buscar produtos:", erro);
-        throw erro;
-    }
+   
 }
 
 async function criaProduto(nome,valor,imagem) {
