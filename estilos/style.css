@@ -48,14 +48,9 @@
 
 /* Esquerda */
 .esquerda{
-    /* font-family: var(--fonte); */
-    /* display: flex; */
     position: relative;
     left: 70px;
     margin: auto;
-    
-    /* padding: 20px; */
-    
 }
 
 .esquerda_titulo{
@@ -163,8 +158,6 @@
 .form_input{
     display: flex;
     flex-direction: column;
-    
-    
     gap: 40px;
 }
 
@@ -215,10 +208,7 @@
     background-color: var(--roxo);
     color: var(--branco);
     padding: 64px 0px 64px 0px;
-    /* margin: auto; */
-    /* width: 100%; */
     position:relative ;
-    /* left: 50%; */
     text-align: center;
 }
 
@@ -237,5 +227,5 @@
 
 .footer_t{
     font-family: var(--fonte-secundaria);
-    
 }
+
