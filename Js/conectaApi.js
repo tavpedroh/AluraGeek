@@ -1,5 +1,5 @@
 async function listaProdutos() {
-        const conexao = await fetch('http://localhost:3000/produtos');
+        const conexao = await fetch('https://my-json-server.typicode.com/tavpedroh/API-AluraGeek/produtos');
         
         const conexaoConvertida = await conexao.json();
         return conexaoConvertida;
@@ -7,7 +7,7 @@ async function listaProdutos() {
 }
 
 async function criaProduto(nome,valor,imagem) {
-    const conexao = await fetch('http://localhost:3000/produtos',{
+    const conexao = await fetch('https://my-json-server.typicode.com/tavpedroh/API-AluraGeek/produtos',{
         method: "POST",
         headers: {"content-type": "application/json"},
         body: JSON.stringify({
@@ -26,7 +26,7 @@ async function criaProduto(nome,valor,imagem) {
 
 
 async function deletaProduto(id) {
-    const conexao = await fetch(`http://localhost:3000/produtos/${id}`, {
+    const conexao = await fetch(`https://my-json-server.typicode.com/tavpedroh/API-AluraGeek/produtos/${id}`, {
         method: "DELETE",
     });
 
